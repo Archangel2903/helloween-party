@@ -12,14 +12,257 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container">
-            <h1>Header Title</h1>
+            <div class="header-content">
+                <div class="header-content__logo-wrap">
+                    <a href="/" class="logo">
+                        <picture>
+                            <img src="<%= require('./img/logo.svg') %>" alt="" title="">
+                        </picture>
+                    </a>
+                </div>
+
+                <button type="button" class="header-content__burger">
+                    <svg><use xlink:href="./img/spritemap.svg#sprite-menu"></use></svg>
+                </button>
+                <div class="header-content-inside">
+                    <nav class="header-content-inside__menu">
+                        <a href="/" class="header-content-inside__link">ЗОНИ</a>
+                        <a href="/" class="header-content-inside__link">ПАРТНЕРИ</a>
+                        <a href="/" class="header-content-inside__link">КВИТКИ</a>
+                    </nav>
+
+                    <a href="https://c.rte.im/#/p/U2FsdGVkX1%2FOVKQyGPl%2BWpvkrd1spxqxNirAKqcVgKg%3D" class="header-content-inside__btn btn-style">ПРИДБАТИ КВИТОК<svg><use xlink:href="./img/spritemap.svg#sprite-arrow"></use></svg></a>
+                </div>
+            </div>
         </div>
     </header>
     <!-- HEADER END -->
 
     <!-- CONTENT -->
     <main class="content">
-        <section class="section">
+        <section class="section section-main">
+            <div class="section-bg">
+                <picture>
+                    <img src="<%= require('./img/main-bg.png') %>" class="section-bg__img" alt="" title="">
+                </picture>
+            </div>
+
+            <div class="container">
+                <div class="main-content">
+                    <p class="main-content__text">
+                        <span class="main-content__text_rounded">Halloween <span class="d-lg-none">stand - up PARTY</span></span>
+                        <span class="d-none d-lg-inline">stand - up PARTY</span>
+                    </p>
+                    <p class="main-content__text">для арбітражного комʼюніті <img src="<%= require('./img/highlight.svg') %>" class="text-decorate" alt=""></p>
+
+                    <a href="https://c.rte.im/#/p/U2FsdGVkX1%2FOVKQyGPl%2BWpvkrd1spxqxNirAKqcVgKg%3D" class="main-content__link btn-style btn-style_glows btn-style_lg">ПРИДБАТИ КВИТОК<svg><use xlink:href="./img/spritemap.svg#sprite-arrow"></use></svg></a>
+                </div>
+
+                <div class="event-countdown">
+                    <p class="event-countdown__text">ДО ВЕЧІРКИ ЗАЛИШИЛОСЬ</p>
+
+                    <div class="countdown">
+                        <div class="countdown__item">
+                            <span id="days" class="countdown__number">23</span>
+                            <span class="countdown__label">DAYS</span>
+                        </div>
+                        <div class="countdown__item">
+                            <span id="hours" class="countdown__number">06</span>
+                            <span class="countdown__label">HOURS</span>
+                        </div>
+                        <div class="countdown__item">
+                            <span id="minutes" class="countdown__number">45</span>
+                            <span class="countdown__label">MINUTES</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-categories">
+            <div class="container">
+                <div class="categories">
+                    <div class="categories__item">
+                        <picture class="categories__icon">
+                            <img src="<%= require('./img/categories_01.png') %>" alt="" title="">
+                        </picture>
+                        <span class="categories__label">GAMBLING</span>
+                    </div>
+                    <div class="categories__item">
+                        <picture class="categories__icon">
+                            <img src="<%= require('./img/categories_02.png') %>" alt="" title="">
+                        </picture>
+                        <span class="categories__label">NUTRA</span>
+                    </div>
+                    <div class="categories__item">
+                        <picture class="categories__icon">
+                            <img src="<%= require('./img/categories_03.png') %>" alt="" title="">
+                        </picture>
+                        <span class="categories__label">BETTING</span>
+                    </div>
+                    <div class="categories__item">
+                        <picture class="categories__icon">
+                            <img src="<%= require('./img/categories_04.png') %>" alt="" title="">
+                        </picture>
+                        <span class="categories__label">CRYPTO</span>
+                    </div>
+                    <div class="categories__item">
+                        <picture class="categories__icon">
+                            <img src="<%= require('./img/categories_05.png') %>" alt="" title="">
+                        </picture>
+                        <span class="categories__label">FINANCE</span>
+                    </div>
+                    <div class="categories__item">
+                        <picture class="categories__icon">
+                            <img src="<%= require('./img/categories_06.png') %>" alt="" title="">
+                        </picture>
+                        <span class="categories__label">DATING</span>
+                    </div>
+                    <div class="categories__item">
+                        <picture class="categories__icon">
+                            <img src="<%= require('./img/categories_07.png') %>" alt="" title="">
+                        </picture>
+                        <span class="categories__label">ТА ІНШІ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-description">
+            <div class="container-fluid position-relative">
+                <div class="info-content-wrapper">
+                    <picture class="info-content-pic">
+                        <img src="<%= require('./img/face.png') %>" alt="" title="">
+                    </picture>
+
+                    <div class="info-content">
+                        <p class="info-content__text">Як стати свідками запеклої боротьби у конкурсі “Найстрашніша історія”, побувати на стендапі популярної комикині, посмакувати хелоуінські коктейлі і не розірватись?</p>
+                        <p class="info-content__text">Відповідь проста - Halloween Party!<br>Вечірка, яка об’єднує дві специфічні емоції між собою: страх та радість, уже чекає на тебе</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-activities">
+            <div class="container">
+                <div class="activities">
+                    <div class="activities__item">
+                        <p class="activities__title">СТЕНДАП</p>
+                        <p class="activities__description">Стендап від популярної української комікині і повітряної гімнастки</p>
+                    </div>
+                    <div class="activities__item">
+                        <p class="activities__title">КОНКУРС</p>
+                        <p class="activities__description">Стань свідком боротьби за PlayStation 5 в конкурсі “Найстрашніша історія”</p>
+                    </div>
+                    <div class="activities__item">
+                        <p class="activities__title">Нетворкінг</p>
+                        <p class="activities__description">Заведи нові корисні знайомства під атмосферний DJ сет</p>
+                    </div>
+                    <div class="activities__item">
+                        <p class="activities__title">ілюзіоніст</p>
+                        <p class="activities__description">Захоплюючі магічні трюки від майстра ілюзій</p>
+                    </div>
+                    <div class="activities__item">
+                        <p class="activities__title">Коктейлі</p>
+                        <p class="activities__description">Насолоджуйся моторошно смачними Хелоуінськими коктейлями</p>
+                    </div>
+
+                    <picture class="activities__decor">
+                        <img src="<%= require('./img/bat.svg') %>" alt="" title="">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-partners">
+            <div class="container">
+                <div class="partners-wrapper">
+                    <p class="partners__title">INFO PARTNERS</p>
+
+                    <div class="partners">
+                        <div class="partners__item">LOGO</div>
+                        <div class="partners__item">LOGO</div>
+                        <div class="partners__item">LOGO</div>
+                        <div class="partners__item">LOGO</div>
+                        <div class="partners__item">LOGO</div>
+                        <div class="partners__item">LOGO</div>
+                        <div class="partners__item">LOGO</div>
+                        <div class="partners__item">LOGO</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-tickets">
+            <div class="container">
+                <div class="tickets">
+                    <div class="tickets__item">
+                        <div class="tickets__head">
+                            <p class="tickets__title">EARLY BIRD TICKET</p>
+                        </div>
+                        <div class="tickets__body">
+                            <p class="tickets__location">31.10, kyiv, secret place</p>
+                            <div class="tickets__info">
+                                <p class="tickets__price-info">НАЙНИЖЧА ЦІНА<br>7 - 23 жовтня</p>
+                                <p class="tickets__price">$200</p>
+                            </div>
+                            <div class="tickets__description">
+                                <div class="tickets__description-name">WHITELEAD PRESENTS: </div>
+                                <ul class="tickets__description-list">
+                                    <li>Кімната арбітражних страхів</li>
+                                    <li>Stand-up</li>
+                                    <li>Можливість взяти участь у конкурсі на Найстрашнішу історію</li>
+                                    <li>DJ-сет</li>
+                                    <li>Безлімітний алкоголь</li>
+                                    <li>Finger-food</li>
+                                    <li>Кальяни</li>
+                                </ul>
+                            </div>
+
+                            <a href="/" class="tickets__link">ПРИДБАТИ КВИТОК</a>
+                        </div>
+                    </div>
+
+                    <div class="tickets__item">
+                        <div class="tickets__head">
+                            <p class="tickets__title">LAST CHANCE TICKET</p>
+                        </div>
+                        <div class="tickets__body">
+                            <p class="tickets__location">31.10, kyiv, secret place</p>
+                            <div class="tickets__info">
+                                <p class="tickets__price-info">ЦІНА ПІСЛЯ<br>23 жовтня</p>
+                                <p class="tickets__price">$250</p>
+                            </div>
+                            <div class="tickets__description">
+                                <div class="tickets__description-name">WHITELEAD PRESENTS: </div>
+                                <ul class="tickets__description-list">
+                                    <li>Кімната арбітражних страхів</li>
+                                    <li>Stand-up</li>
+                                    <li>Можливість взяти участь у конкурсі на Найстрашнішу історію</li>
+                                    <li>DJ-сет</li>
+                                    <li>Безлімітний алкоголь</li>
+                                    <li>Finger-food</li>
+                                    <li>Кальяни</li>
+                                </ul>
+                            </div>
+
+                            <a href="/" class="tickets__link">ПРИДБАТИ КВИТОК</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-support">
+            <div class="container">
+                <div class="support">
+                    <p class="support__title">ЗАЛИШИЛИСЬ ПИТАННЯ?<br>ПИШИ!</p>
+                    <a href="/" class="support__link">НАПИСАТИ В САППОРТ</a>
+                </div>
+            </div>
+        </section>
+
+        <!--<section class="section">
             <div class="container">
                 <div class="registration">
                     <div class="registration__offer">
@@ -79,9 +322,30 @@
                         Policy</a> of the company and confirm that you are of legal age</p>
                 </div>
             </div>
-        </section>
+        </section>-->
     </main>
     <!-- CONTENT END -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="" class="logo">white<span>lead</span></a>
+
+                <div class="social-list">
+                    <a href="#" class="social-list__link" target="_blank">Site</a>
+                    <a href="#" class="social-list__link" target="_blank">Instagram</a>
+                    <a href="#" class="social-list__link" target="_blank">Telegram</a>
+                </div>
+            </div>
+
+            <div class="footer-end">
+                <span class="footer-end__text">Halloween Party is waiting for you!</span>
+                <span class="copyright">2024 © WhiteLead. All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
 </div>
 <!-- BODY END   -->
 </body>

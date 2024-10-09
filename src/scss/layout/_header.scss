@@ -4,8 +4,56 @@
 header.header {
   order: 1;
   -webkit-order: 1;
-  position: relative;
+  position: absolute;
   min-width: 320px;
   width: 100%;
   z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 26px 0 0;
+
+  &__logo-wrap {
+    flex: auto 1 0;
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+.header-content-inside {
+  flex: auto 1 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+
+  &__menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__link {
+    font-weight: 700;
+    text-decoration: none !important;
+  }
+
+  &__btn {
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
 }

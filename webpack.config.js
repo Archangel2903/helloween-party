@@ -15,7 +15,7 @@ module.exports = {
     entry: {main: "./src/js/index.js"},
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.[hash].min.js"
+        filename: "bundle.min.js"
     },
     module: {
         rules: [
@@ -66,7 +66,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: "style.[hash].min.css",
+            filename: "style.min.css",
             chunkFilename: '[id].[hash].css'
         }),
         new OptimizeCSSAssetsPlugin({
