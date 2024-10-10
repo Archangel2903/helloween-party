@@ -308,17 +308,20 @@ iframe {
 ::selection {
   text-shadow: none;
   color: $selection-text-color;
+  -webkit-text-fill-color: $selection-text-color;
   background: $selection-bg-color;
 }
 
 ::-moz-selection {
   text-shadow: none;
   color: $selection-text-color;
+  -webkit-text-fill-color: $selection-text-color;
   background: $selection-bg-color;
 }
 
 ::-ms-selection {
   text-shadow: none;
   color: $selection-text-color;
+  -webkit-text-fill-color: $selection-text-color;
   background: $selection-bg-color;
 }

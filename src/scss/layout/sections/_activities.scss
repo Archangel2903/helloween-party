@@ -1,0 +1,139 @@
+/* SECTION ACTIVITIES */
+.section-activities {
+  padding: 0 0 75px;
+
+  &__decor {
+    position: absolute;
+    inset: auto auto -25% 0;
+    z-index: -1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 610px;
+      height: 755px;
+      background: radial-gradient(ellipse at center, #7b2100 0%, rgba(165, 71, 0, 0.64) 100%);
+      filter: blur(400px);
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.activities {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: stretch;
+  column-gap: 20px;
+  row-gap: 14px;
+
+  &__item {
+    width: 100%;
+    background: var(--gradient);
+    border-radius: 25px;
+    padding: 30px 10px;
+  }
+  &__title {
+    margin: 0 0 16px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__description {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  &__decor {
+    position: absolute;
+    top: 30%;
+    right: -15%;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 235px;
+      height: 430px;
+      background: radial-gradient(ellipse at center, rgba(123,33,0,1) 0%,rgba(165,71,0,0.64) 100%);
+      filter: blur(200px);
+      transform: translate(-50%, -50%) rotate(65deg);
+      z-index: -1;
+    }
+
+    img {
+      max-width: 214px;
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .activities {
+    &__item {
+      max-width: 334px;
+      width: 48%;
+    }
+    &__decor {
+      top: 20%;
+      right: -10%;
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .activities {
+    &__title {
+      font-size: 28px;
+    }
+    &__description {
+      font-size: 16px;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .section-activities {
+    padding: 100px 0;
+
+    &__decor {
+      inset: 45% 0 auto auto;
+      transform: translateY(-50%);
+    }
+  }
+
+  .activities {
+    row-gap: 30px;
+
+    &__item {
+      max-width: 412px;
+      padding: 40px 24px;
+    }
+    &__decor {
+      top: 25%;
+      right: auto;
+      left: -10%;
+
+      img {
+        max-width: 310px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .activities {
+    &__decor {
+      top: 40%;
+      left: 30px;
+    }
+  }
+}

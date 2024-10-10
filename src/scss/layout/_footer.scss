@@ -5,6 +5,134 @@ footer.footer {
   order: 3;
   -webkit-order: 3;
   position: relative;
+  background: #180800;
+  overflow: hidden;
+  z-index: 0;
 }
 
-.copyright {}
+.footer {
+  &-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 4px 0 30px;
+
+    &__logo {
+      display: inline-flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+      margin: 0 0 10px;
+
+      img {
+        max-width: 60px;
+        margin-right: 10px;
+      }
+
+      .logo {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none !important;
+
+        span {
+          color: #a7978f;
+          transition: $transition-base;
+        }
+
+        &:hover {
+          span {
+            color: $main-first-color;
+          }
+        }
+      }
+    }
+  }
+  &-end {
+    padding: 34px 0;
+    border-top: 1px solid var(--white);
+
+    &__text {
+      display: none;
+      font-size: 16px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      max-width: 337px;
+    }
+  }
+}
+
+.social-list {
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 22px;
+
+  &__link {
+    svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
+
+.copyright {
+  font-size: 10px;
+}
+
+@include media-breakpoint-up(sm) {
+  .copyright {
+    font-size: 16px;
+  }
+}
+@include media-breakpoint-up(md) {
+  .footer {
+    &-content {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+
+      &__logo {
+        margin: 0;
+
+        img {
+          max-width: none;
+        }
+
+        .logo {
+          font-size: 35px;
+        }
+      }
+    }
+    &-end {
+      &__text {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .social-list {
+    &__link {
+      svg {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(xl) {}

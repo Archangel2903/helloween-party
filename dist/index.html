@@ -22,7 +22,7 @@
                 </div>
 
                 <button type="button" class="header-content__burger">
-                    <svg><use xlink:href="./img/spritemap.svg#sprite-menu"></use></svg>
+                    <span class="header-content__burger-line"></span>
                 </button>
                 <div class="header-content-inside">
                     <nav class="header-content-inside__menu">
@@ -43,7 +43,8 @@
         <section class="section section-main">
             <div class="section-bg">
                 <picture>
-                    <img src="img/main-bg.png" class="section-bg__img" alt="" title="">
+                    <source media="(min-width: 768px)" srcset="img/main-bg.png">
+                    <img src="img/main-bg_mob.png" class="section-bg__img" alt="" title="">
                 </picture>
             </div>
 
@@ -129,21 +130,26 @@
         </section>
 
         <section class="section section-description">
-            <div class="container-fluid position-relative">
+            <div class="container-fluid">
                 <div class="info-content-wrapper">
-                    <picture class="info-content-pic">
-                        <img src="img/face.png" alt="" title="">
-                    </picture>
-
                     <div class="info-content">
                         <p class="info-content__text">Як стати свідками запеклої боротьби у конкурсі “Найстрашніша історія”, побувати на стендапі популярної комикині, посмакувати хелоуінські коктейлі і не розірватись?</p>
                         <p class="info-content__text">Відповідь проста - Halloween Party!<br>Вечірка, яка об’єднує дві специфічні емоції між собою: страх та радість, уже чекає на тебе</p>
                     </div>
+
+                    <picture class="info-content-pic">
+                        <source media="(min-width: 768px)" srcset="img/face.png">
+                        <img src="img/face_mob.png" alt="" title="">
+                    </picture>
                 </div>
             </div>
         </section>
 
         <section class="section section-activities">
+            <picture class="section-activities__decor">
+                <img src="img/spider-net.svg" alt="" title="">
+            </picture>
+
             <div class="container">
                 <div class="activities">
                     <div class="activities__item">
@@ -180,14 +186,34 @@
                     <p class="partners__title">INFO PARTNERS</p>
 
                     <div class="partners">
-                        <div class="partners__item">LOGO</div>
-                        <div class="partners__item">LOGO</div>
-                        <div class="partners__item">LOGO</div>
-                        <div class="partners__item">LOGO</div>
-                        <div class="partners__item">LOGO</div>
-                        <div class="partners__item">LOGO</div>
-                        <div class="partners__item">LOGO</div>
-                        <div class="partners__item">LOGO</div>
+                        <picture class="partners__item">
+                            <img src="img/partner-logo_white.png" alt="" title="">
+                        </picture>
+                        <picture class="partners__item">
+                            <img src="img/partner-logo_white.png" alt="" title="">
+                        </picture>
+                        <picture class="partners__item">
+                            <img src="img/partner-logo_white.png" alt="" title="">
+                        </picture>
+                        <picture class="partners__item">
+                            <img src="img/partner-logo_white.png" alt="" title="">
+                        </picture>
+                        <picture class="partners__item">
+                            <img src="img/partner-logo_white.png" alt="" title="">
+                        </picture>
+                        <picture class="partners__item">
+                            <img src="img/partner-logo_white.png" alt="" title="">
+                        </picture>
+                        <picture class="partners__item">
+                            <img src="img/partner-logo_white.png" alt="" title="">
+                        </picture>
+                        <picture class="partners__item">
+                            <img src="img/partner-logo_white.png" alt="" title="">
+                        </picture>
+
+                        <picture class="partners__decor">
+                            <img src="img/fire-jack.png" alt="" title="">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -196,7 +222,7 @@
         <section class="section section-tickets">
             <div class="container">
                 <div class="tickets">
-                    <div class="tickets__item">
+                    <div class="tickets__item tickets__item_actual">
                         <div class="tickets__head">
                             <p class="tickets__title">EARLY BIRD TICKET</p>
                         </div>
@@ -207,7 +233,7 @@
                                 <p class="tickets__price">$200</p>
                             </div>
                             <div class="tickets__description">
-                                <div class="tickets__description-name">WHITELEAD PRESENTS: </div>
+                                <div class="tickets__description-name"><svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg>WHITELEAD PRESENTS: </div>
                                 <ul class="tickets__description-list">
                                     <li>Кімната арбітражних страхів</li>
                                     <li>Stand-up</li>
@@ -218,9 +244,9 @@
                                     <li>Кальяни</li>
                                 </ul>
                             </div>
-
-                            <a href="/" class="tickets__link">ПРИДБАТИ КВИТОК</a>
                         </div>
+
+                        <a href="https://c.rte.im/#/p/U2FsdGVkX1%2FOVKQyGPl%2BWpvkrd1spxqxNirAKqcVgKg%3D" class="tickets__link btn-style btn-style_glows">ПРИДБАТИ КВИТОК<svg><use xlink:href="./img/spritemap.svg#sprite-arrow"></use></svg></a>
                     </div>
 
                     <div class="tickets__item">
@@ -234,7 +260,7 @@
                                 <p class="tickets__price">$250</p>
                             </div>
                             <div class="tickets__description">
-                                <div class="tickets__description-name">WHITELEAD PRESENTS: </div>
+                                <div class="tickets__description-name"><svg><use xlink:href="./img/spritemap.svg#sprite-arrow-right"></use></svg>WHITELEAD PRESENTS: </div>
                                 <ul class="tickets__description-list">
                                     <li>Кімната арбітражних страхів</li>
                                     <li>Stand-up</li>
@@ -245,9 +271,9 @@
                                     <li>Кальяни</li>
                                 </ul>
                             </div>
-
-                            <a href="/" class="tickets__link">ПРИДБАТИ КВИТОК</a>
                         </div>
+
+                        <a href="https://c.rte.im/#/p/U2FsdGVkX1%2FOVKQyGPl%2BWpvkrd1spxqxNirAKqcVgKg%3D" class="tickets__link btn-style">ПРИДБАТИ КВИТОК<svg><use xlink:href="./img/spritemap.svg#sprite-arrow"></use></svg></a>
                     </div>
                 </div>
             </div>
@@ -256,73 +282,11 @@
         <section class="section section-support">
             <div class="container">
                 <div class="support">
-                    <p class="support__title">ЗАЛИШИЛИСЬ ПИТАННЯ?<br>ПИШИ!</p>
-                    <a href="/" class="support__link">НАПИСАТИ В САППОРТ</a>
+                    <p class="support__title gradient-text">ЗАЛИШИЛИСЬ ПИТАННЯ?<br>ПИШИ!</p>
+                    <a href="/" class="support__btn btn-style"><span class="gradient-text">НАПИСАТИ В САППОРТ</span></a>
                 </div>
             </div>
         </section>
-
-        <!--<section class="section">
-            <div class="container">
-                <div class="registration">
-                    <div class="registration__offer">
-                        <p class="registration__offer-text">Congrats!</p>
-                        <p class="registration__offer-text">You won Welcome Bonus</p>
-                        <p class="registration__offer-title">1500 <span>$ +</span> 150 <span>fs</span></p>
-                    </div>
-
-                    <form method="post" action="" class="registration__form">
-                        <p class="registration__title">Registration</p>
-
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <label class="form-group">
-                                    <input type="text" class="form-control" placeholder="First name">
-                                </label>
-                            </div>
-                            <div class="col-sm-6">
-                                <label class="form-group">
-                                    <input type="text" class="form-control" placeholder="Last name">
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="col-12">
-                                <label class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email">
-                                </label>
-                            </div>
-                        </div>
-
-                        <p class="registration__form-separate">or</p>
-
-                        <div class="form-row">
-                            <div class="col-12">
-                                <label class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Phone">
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="col-sm-6">
-                                <label class="form-group">
-                                    <button type="button" class="form-button-pass"><svg><use xlink:href="img/spritemap.svg#sprite-pass-visible"></use></svg></button>
-                                    <input type="password" class="form-control" placeholder="Password">
-                                </label>
-                            </div>
-                            <div class="col-sm-6">
-                                <button type="submit" class="btn btn-primary w-100">Register & Get Bonus</button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <p class="registration__text">By clicking this button you confirm that you have read and agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy
-                        Policy</a> of the company and confirm that you are of legal age</p>
-                </div>
-            </div>
-        </section>-->
     </main>
     <!-- CONTENT END -->
 
@@ -330,23 +294,67 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <a href="" class="logo">white<span>lead</span></a>
+                <div class="footer-content__logo">
+                    <picture>
+                        <img src="img/pumpkin-jack.png" alt="" title="">
+                    </picture>
+                    <a href="/" class="logo">white<span>lead</span></a>
+                </div>
 
                 <div class="social-list">
-                    <a href="#" class="social-list__link" target="_blank">Site</a>
-                    <a href="#" class="social-list__link" target="_blank">Instagram</a>
-                    <a href="#" class="social-list__link" target="_blank">Telegram</a>
+                    <a href="#" class="social-list__link" target="_blank"><svg><use xlink:href="./img/spritemap.svg#sprite-whitelead"></use></svg></a>
+                    <a href="#" class="social-list__link" target="_blank"><svg><use xlink:href="./img/spritemap.svg#sprite-instagram"></use></svg></a>
+                    <a href="#" class="social-list__link" target="_blank"><svg><use xlink:href="./img/spritemap.svg#sprite-telegram"></use></svg></a>
                 </div>
             </div>
+        </div>
 
-            <div class="footer-end">
-                <span class="footer-end__text">Halloween Party is waiting for you!</span>
-                <span class="copyright">2024 © WhiteLead. All Rights Reserved.</span>
+        <div class="footer-end">
+            <div class="container">
+                <div class="d-flex flex-row flex-wrap justify-content-center justify-content-md-between">
+                    <span class="footer-end__text">Halloween Party is waiting for you!</span>
+                    <span class="copyright">2024 © WhiteLead. All Rights Reserved.</span>
+                </div>
             </div>
         </div>
+
+        <picture class="footer__decor">
+            <img src="img/spider-net.svg" alt="" title="">
+        </picture>
     </footer>
     <!-- FOOTER END -->
 </div>
+
+<script>
+    // Указываем дату и время окончания
+    const eventDate = new Date('2024-10-31T18:00:00').getTime();
+
+    // Функция обратного отсчёта
+    function countdownTimer() {
+        const now = new Date().getTime();
+        const timeRemaining = eventDate - now;
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+
+        document.getElementById('days').textContent = days < 10 ? '0' + days : days;
+        document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+        document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+
+        if (timeRemaining < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+        }
+    }
+
+    // Запускаем обновление каждую минуту
+    const countdownInterval = setInterval(countdownTimer, 1000);
+
+    countdownTimer();
+</script>
 <!-- BODY END   -->
 <script type="text/javascript" src="bundle.min.js"></script></body>
 </html>
